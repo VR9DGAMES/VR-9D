@@ -1,0 +1,164 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <style type="text/css"> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efedd6;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.box {
+  background-color: steelblue;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 300px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+ 
+
+ </style>    <title>VR</title>
+  </head>
+  <body>
+    <h1>.....VR 9D IMAGES </h1>
+   <div class="box">
+
+  <img 
+       src="z.jpg"
+       alt="first-image"
+       class="box" 
+       />
+                     </div> 
+                      <div class="box">
+
+  <img 
+       src="z.jpg"
+       alt="first-image"
+       class="box" 
+       />
+                     </div> 
+   <div class="box">
+
+  <img 
+       src="1.jpg"
+       alt="first-image"
+       class="box" 
+       />
+                     </div><div class="box">
+
+  <img 
+       src="9.jpg"
+       alt="first-image"
+       class="box" 
+       />
+                     </div>
+
+                     <br><br> <br><br><div class="box">
+
+  <img 
+       src="10.jfif"
+       alt="first-image"
+       class="box" 
+       />
+                     </div><div class="box">
+
+  <img 
+       src="20.jpg"
+       alt="first-image"
+       class="box" 
+       />
+                     </div><div class="box">
+
+  <img 
+       src="55.jpg"
+       alt="first-image"
+       class="box" 
+       />
+        <br><br>
+      </div>
+       <div class="box">
+
+  <img 
+       src="z.jpg"
+       alt="first-image"
+       class="box" 
+       />
+                     
+                     </div>
+                      <div class="box">
+
+  <img 
+       src="aaa.jpg"
+       alt="first-image"
+       class="box" 
+       />
+                     </div> 
+                      <div class="box">
+
+  <img 
+       src="f.jpg"
+       alt="first-image"
+       class="box" 
+       />
+                     </div> 
+                      <div class="box">
+
+  <img 
+       src="g.png"
+       alt="first-image"
+       class="box" 
+       />
+                     </div> 
+
+    <script > const boxes = document.querySelectorAll('.box')
+
+window.addEventListener('scroll', checkBoxes)
+
+checkBoxes()
+
+function checkBoxes() {
+    const triggerBottom = window.innerHeight / 5 * 4
+
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top
+
+        if(boxTop < triggerBottom) {
+            box.classList.add('show')
+        } else {
+            box.classList.remove('show')
+        }
+    })
+}</script>
+  </body>
+</html>
